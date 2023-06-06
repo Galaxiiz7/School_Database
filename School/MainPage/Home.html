@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta name="viewport" content="with = device-width, initial-scale = 1.0">
+    <meta charset="UTF-8">
+    <title>KMUTT SCHOOL WEBSITE</title>
+    <link rel="stylesheet" href="homestayle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="imagers/logo.png" class="logo"></a>
+            <div class="nav-link">
+                <ul>
+                    <li><a href="Home.html">HOME</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="../StudentLogin/StudentLoginForm.php">Login</a></li>
+                    <li><a href="#" onclick="promptPassword()">Admin</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    <div class="text-box">
+        <h1>SCHOOL OF KMUTT</h1>
+        <p>
+            “วิชาการเป็นเลิศ ก่อเกิดคุณธรรม เด่นล้ำวินัย มีน้ำใจนักกีฬา”
+        </p>
+    </div>
+    </section>
+    <script>
+        function promptPassword() {
+            var password = prompt("Please enter the password:");
+            if (password === null) {
+                return;
+            }
+
+            if (password === "1234") {
+                window.location.href = "../Admin/MainPage.php";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
